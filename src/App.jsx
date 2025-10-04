@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronDown, Users, Zap, DollarSign, Lightbulb, Github, Mail, Phone, BookOpen } from 'lucide-react';
 import { motion } from 'framer-motion';
 import './App.css';
-import demoImage from './assets/pelota.png'; // Ajusta la ruta según la ubicación del archivo
+import demoImage from './assets/basket.png'; // Ajusta la ruta según la ubicación del archivo
 
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
