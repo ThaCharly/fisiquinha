@@ -387,7 +387,7 @@ const App = () => {
             </p>
             <p className="idea-text secondary">
               Este proyecto demuestra cómo la tecnología accesible puede transformar juegos simples 
-              en herramientas educativas poderosas.
+              en herramientas educativas.
             </p>
           </motion.div>
         </div>
@@ -398,9 +398,9 @@ const App = () => {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-info">
-              <h3 className="footer-title">Proyecto de Física - Liceo Científico</h3>
+              <h3 className="footer-title">Proyecto de Física - Liceo IBO</h3>
               <p className="footer-desc">
-                Innovando en la educación física a través de la tecnología y la experimentación práctica.
+                Juegos con física.
               </p>
             </div>
             
@@ -421,7 +421,7 @@ const App = () => {
           </div>
           
           <div className="footer-bottom">
-            <p className="copyright">© 2024 Proyecto de Física. Todos los derechos reservados.</p>
+            <p className="copyright">© 2025 Proyecto de Física, 1°4. Ningún derecho reservado.</p>
             <div className="social-links">
               <a href="#" className="social-link">
                 <Github className="icon" />
