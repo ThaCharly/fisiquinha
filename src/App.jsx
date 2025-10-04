@@ -421,7 +421,7 @@ const App = () => {
           </div>
           
           <div className="footer-bottom">
-            <p className="copyright">© 2025 Proyecto de Física 1°4.~{"\n"} Ningún derecho reservado.</p>
+            <p className="copyright">© 2025 Proyecto de Física 1°4. Ningún derecho reservado.</p>
             <div className="social-links">
               <a href="#" className="social-link">
                 <Github className="icon" />
