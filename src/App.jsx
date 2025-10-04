@@ -50,13 +50,13 @@ const App = () => {
   ];
 
   const materiales = [
-    { item: 'Aro de metal', precio: '$15.00' },
-    { item: 'Sensor infrarrojo', precio: '$8.50' },
-    { item: 'Display 7 segmentos', precio: '$12.00' },
-    { item: 'Arduino Uno', precio: '$25.00' },
-    { item: 'Madera para base', precio: '$20.00' },
-    { item: 'Cables y conectores', precio: '$10.00' },
-    { item: 'Fuente de alimentación', precio: '$18.00' }
+    { item: 'Pintura', precio: '$219.00' },
+    { item: 'Carton Grueso', precio: '10.00' },
+    { item: 'Papel aluminio', precio: '$320.00' },
+    { item: 'Alambre', precio: '$300.00' },
+    { item: 'Trincheta', precio: '$80.00' },
+    { item: 'Cinta', precio: '$130.00' },
+    { item: 'Más herramientas', precio: '$100.00' }
   ];
 
   const totalCostos = materiales.reduce((total, item) => {
@@ -114,7 +114,7 @@ const App = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Un aro, una pelota, un display de 7 segmentos: física en acción
+            Un aro, una pelota, un display de 7 segmentos: física en juego
           </motion.p>
           
           <motion.div 
@@ -157,7 +157,7 @@ const App = () => {
           >
             <h2 className="section-title">¿Cómo funciona?</h2>
             <p className="section-subtitle">
-              El jugador tira la pelota → pasa por el aro → sensor detecta → se suma un punto en el display de 7 segmentos.
+              El jugador tira la pelota → pasa por el aro → cae la pelota sobre el sensor → se suma un punto en el display de 7 segmentos.
             </p>
           </motion.div>
 
@@ -170,7 +170,7 @@ const App = () => {
               viewport={{ once: true }}
             >
               <img 
-                src="https://placehold.co/500x400/6366f1/white?text=Diagrama+del+Sistema" 
+                src="https://placehold.co/500x400/6366f1/white?text=Diagrama+del+Sistema+ >" 
                 alt="Diagrama del sistema" 
               />
             </motion.div>
@@ -199,7 +199,7 @@ const App = () => {
                   </div>
                   <div>
                     <h3 className="feature-title">Detección de Paso</h3>
-                    <p className="feature-desc">Sensores infrarrojos detectan el paso de la pelota a través del aro con precisión milimétrica.</p>
+                    <p className="feature-desc">Sensor en el punto de caída de la pelota detecta el punto con alta precisión.</p>
                   </div>
                 </div>
                 
@@ -230,7 +230,7 @@ const App = () => {
           >
             <h2 className="section-title">Nuestro Equipo</h2>
             <p className="section-subtitle">
-              Un grupo apasionado por la física, la tecnología y la innovación educativa.
+              Un grupo apasionado por los juegos, la tecnología y la nota.
             </p>
           </motion.div>
 
