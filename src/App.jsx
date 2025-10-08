@@ -51,7 +51,7 @@ const App = () => {
 
   const materiales = [
     { item: 'Pintura', precio: '$219.00' },
-    { item: 'Carton Grueso', precio: '10.00' },
+    { item: 'Cartón grueso', precio: '$10.00' },
     { item: 'Papel aluminio', precio: '$320.00' },
     { item: 'Alambre', precio: '$300.00' },
     { item: 'Trincheta', precio: '$80.00' },
