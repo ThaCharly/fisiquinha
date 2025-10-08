@@ -8,7 +8,28 @@ import demoImage from './assets/basket.png';
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('inicio');
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
+
+    // (Opcional) Persistir preferencia en localStorage
+  useEffect(() => {
+    // Al cargar, intentar leer del localStorage, pero como queremos oscuro por defecto,
+    // solo usamos localStorage si ya existe una preferencia explícita
+    const saved = localStorage.getItem('darkMode');
+    if (saved !== null) {
+      setDarkMode(saved === 'true');
+    } else {
+      // Por defecto: oscuro
+      setDarkMode(true);
+      localStorage.setItem('darkMode', 'true');
+    }
+  }, []);
+
+  // Guardar en localStorage cuando cambie
+  useEffect(() => {
+    localStorage.setItem('darkMode', darkMode.toString());
+    // También podrías aplicar la clase al <html> si lo prefieres, 
+    // pero como usas .dark-mode en .app, no es necesario
+  }, [darkMode]);
 
   useEffect(() => {
     const handleScroll = () => {

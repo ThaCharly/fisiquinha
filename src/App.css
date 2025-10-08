@@ -737,3 +737,18 @@ p {
   /* Ajuste fino: mueve ligeramente a la derecha para centrar visualmente */
   transform: translateX(0.7px);
 }
+
+/* Al final de App.css, dentro de los media queries existentes o como nuevo bloque */
+
+@media (max-width: 768px) {
+  .nav-controls {
+    gap: 0.5rem;
+  }
+
+  .theme-toggle {
+    width: 32px;
+    height: 32px;
+    /* Mover ligeramente a la izquierda */
+    margin-right: -4px; /* 👈 esto lo desplaza a la izquierda */
+  }
+}
