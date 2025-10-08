@@ -93,7 +93,7 @@ const App = () => {
             className="logo"
             whileHover={{ scale: 1.05 }}
           >
-            Física en Acción
+            Física y Juego
           </motion.div>
           
           <div className="nav-controls">

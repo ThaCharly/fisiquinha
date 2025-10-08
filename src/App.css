@@ -730,3 +730,10 @@ p {
     font-size: 1.25rem;
   }
 }
+
+/* Corrección visual para íconos de tema */
+.theme-toggle .icon {
+  margin: 0;
+  /* Ajuste fino: mueve ligeramente a la derecha para centrar visualmente */
+  transform: translateX(0.7px);
+}
