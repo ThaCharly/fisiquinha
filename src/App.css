@@ -1,4 +1,4 @@
-/* App.css - Manteniendo el diseño original pero agregando estilos para la nueva sección */
+/* App.css */
 :root {
   --primary: #3b82f6;
   --primary-dark: #2563eb;
@@ -21,6 +21,16 @@
   --border-radius-lg: 1.5rem;
 }
 
+/* Dark mode variables */
+.dark-mode {
+  --light-bg: #1e293b;
+  --text-dark: #f1f5f9;
+  --text-gray: #94a3b8;
+  --border-color: #334155;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -37,6 +47,13 @@ body {
 
 .app {
   min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+/* Dark mode body */
+.dark-mode body {
+  background-color: var(--dark-bg);
+  color: var(--text-dark);
 }
 
 /* Container */
@@ -85,6 +102,10 @@ p {
   box-shadow: var(--shadow);
 }
 
+.dark-mode .navbar.scrolled {
+  background: rgba(17, 24, 39, 0.95);
+}
+
 .navbar .container {
   display: flex;
   justify-content: space-between;
@@ -96,6 +117,34 @@ p {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary);
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.theme-toggle:hover {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.dark-mode .theme-toggle:hover {
+  background: rgba(59, 130, 246, 0.2);
 }
 
 .nav-menu {
@@ -131,6 +180,11 @@ p {
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #eff6ff 0%, #e0f2fe 100%);
+  transition: background 0.3s ease;
+}
+
+.dark-mode .hero {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
 }
 
 .hero-title {
@@ -272,6 +326,21 @@ p {
   color: var(--accent-purple);
 }
 
+.dark-mode .feature-icon.blue {
+  background: #1e293b;
+  color: var(--primary);
+}
+
+.dark-mode .feature-icon.green {
+  background: #1e293b;
+  color: var(--accent-green);
+}
+
+.dark-mode .feature-icon.purple {
+  background: #1e293b;
+  color: var(--accent-purple);
+}
+
 .feature-title {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
@@ -311,8 +380,10 @@ p {
   padding: 1.5rem;
   text-align: center;
   transition: var(--transition);
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
+}
+
+.dark-mode .team-card {
+  background: #1e293b;
 }
 
 .team-card:hover {
@@ -342,13 +413,17 @@ p {
   font-weight: 600;
 }
 
-/* Costos Section - manteniendo el diseño original */
+/* Costos Section */
 .costs-container {
   background: var(--light-bg);
   border-radius: var(--border-radius-lg);
   padding: 2rem;
   max-width: 36rem;
   margin: 0 auto;
+}
+
+.dark-mode .costs-container {
+  background: #1e293b;
 }
 
 .costs-list {
@@ -384,6 +459,10 @@ p {
   border-top: 2px solid #d1d5db;
 }
 
+.dark-mode .total-row {
+  border-top: 2px solid #334155;
+}
+
 .total-label {
   font-size: 1.5rem;
   font-weight: 700;
@@ -411,6 +490,10 @@ p {
   border-radius: var(--border-radius-lg);
   padding: 2rem;
   box-shadow: var(--shadow);
+}
+
+.dark-mode .manual-content {
+  background: #1e293b;
 }
 
 .manual-section {
@@ -453,7 +536,7 @@ p {
   line-height: 1.6;
 }
 
-/* Curiosidades Section - NUEVA */
+/* Curiosidades Section */
 .curiosities-icon {
   width: 3rem;
   height: 3rem;
@@ -486,6 +569,11 @@ p {
   box-shadow: var(--shadow);
   transition: var(--transition);
   border: 1px solid var(--border-color);
+}
+
+.dark-mode .curiosity-card {
+  background: #1e293b;
+  border: 1px solid #334155;
 }
 
 .curiosity-card:hover {
@@ -646,6 +734,15 @@ p {
   
   .curiosities-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .nav-controls {
+    gap: 0.5rem;
+  }
+  
+  .theme-toggle {
+    width: 32px;
+    height: 32px;
   }
 }
 

@@ -1,6 +1,6 @@
 // App.jsx
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Users, Zap, DollarSign, Lightbulb, Github, Mail, Phone, BookOpen } from 'lucide-react';
+import { ChevronDown, Users, Zap, DollarSign, Lightbulb, Github, Mail, Phone, BookOpen, Goal, Sun, Moon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import './App.css';
 import demoImage from './assets/basket.png';
@@ -8,6 +8,7 @@ import demoImage from './assets/basket.png';
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('inicio');
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -84,7 +85,7 @@ const App = () => {
   ];
 
   return (
-    <div className="app">
+    <div className={`app ${darkMode ? 'dark-mode' : ''}`}>
       {/* Navbar */}
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="container">
@@ -95,28 +96,40 @@ const App = () => {
             Física en Acción
           </motion.div>
           
-          <div className="nav-menu">
-            {['Inicio', 'Funcionamiento', 'Integrantes', 'Costos', 'Manual de juego', 'Curiosidades', 'Idea'].map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(
-                  item === 'Curiosidades' ? 'curiosidades' : 
-                  item.toLowerCase() === 'idea' ? 'por-que' : 
-                  item === 'Manual de juego' ? 'manual' : 
-                  item.toLowerCase()
-                )}
-                className={`nav-link ${
-                  activeSection === (
+          <div className="nav-controls">
+            <motion.button
+              className="theme-toggle"
+              onClick={() => setDarkMode(!darkMode)}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              aria-label={darkMode ? "Modo claro" : "Modo oscuro"}
+            >
+              {darkMode ? <Sun className="icon" /> : <Moon className="icon" />}
+            </motion.button>
+            
+            <div className="nav-menu">
+              {['Inicio', 'Funcionamiento', 'Integrantes', 'Costos', 'Manual de juego', 'Curiosidades', 'Idea'].map((item) => (
+                <button
+                  key={item}
+                  onClick={() => scrollToSection(
                     item === 'Curiosidades' ? 'curiosidades' : 
                     item.toLowerCase() === 'idea' ? 'por-que' : 
                     item === 'Manual de juego' ? 'manual' : 
                     item.toLowerCase()
-                  ) ? 'active' : ''
-                }`}
-              >
-                {item}
-              </button>
-            ))}
+                  )}
+                  className={`nav-link ${
+                    activeSection === (
+                      item === 'Curiosidades' ? 'curiosidades' : 
+                      item.toLowerCase() === 'idea' ? 'por-que' : 
+                      item === 'Manual de juego' ? 'manual' : 
+                      item.toLowerCase()
+                    ) ? 'active' : ''
+                  }`}
+                >
+                  {item}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </nav>
@@ -288,12 +301,7 @@ const App = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ 
-                  y: -10,
-                  rotateY: 5,
-                  rotateX: 5
-                }}
-                style={{ transformStyle: 'preserve-3d' }}
+                whileHover={{ y: -10 }}
               >
                 <img 
                   src={integrante.avatar} 
@@ -308,7 +316,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* Costos Section - manteniendo el diseño original simple */}
+      {/* Costos Section */}
       <section id="costos" className="section">
         <div className="container">
           <motion.div
@@ -456,7 +464,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* Curiosidades de Física Section - NUEVA */}
+      {/* Curiosidades de Física Section */}
       <section id="curiosidades" className="section">
         <div className="container">
           <motion.div
@@ -478,16 +486,13 @@ const App = () => {
               <motion.div
                 key={index}
                 className="curiosity-card"
-                initial={{ opacity: 0, y: 30, rotate: Math.random() * 10 - 5 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ 
                   opacity: 1, 
-                  y: 0, 
-                  rotate: 0,
+                  y: 0,
                   transition: { 
                     duration: 0.5, 
-                    delay: index * 0.1,
-                    type: "spring",
-                    stiffness: 100
+                    delay: index * 0.1
                   } 
                 }}
                 viewport={{ once: true }}
@@ -514,7 +519,7 @@ const App = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <Lightbulb className="idea-icon" />
+            <Goal className="idea-icon" />
             <h2 className="section-title">¿Por qué esta idea?</h2>
             <p className="idea-text">
               Queríamos crear un juego inteligente que combinara la diversión de los juegos tradicionales 
