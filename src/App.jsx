@@ -1,6 +1,6 @@
 // App.jsx
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronDown, Users, Zap, DollarSign, Lightbulb, Github, Mail, Phone, BookOpen, Sun, Moon, Basketball } from 'lucide-react';
+import { ChevronDown, Users, Zap, DollarSign, Lightbulb, Github, Mail, Phone, BookOpen, Sun, Moon, Goal } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './App.css';
 
@@ -182,7 +182,7 @@ const App = () => {
             className="logo"
             whileHover={{ scale: 1.05 }}
           >
-            Física en Acción
+            Física y Juegos
           </motion.div>
           
           <div className="nav-controls">
@@ -657,7 +657,7 @@ const App = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <Basketball className="idea-icon" />
+            <Goal className="idea-icon" />
             <h2 className="section-title">¿Por qué esta idea?</h2>
             <p className="idea-text">
               Queríamos crear un juego inteligente que combinara la diversión de los juegos tradicionales 
