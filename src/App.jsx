@@ -1,6 +1,6 @@
 // App.jsx
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronDown, Users, Zap, DollarSign, Lightbulb, Github, Mail, Phone, BookOpen, Sun, Moon, basketball } from 'lucide-react';
+import { ChevronDown, Users, Zap, DollarSign, Lightbulb, Github, Mail, Phone, BookOpen, Sun, Moon, Basketball } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './App.css';
 
