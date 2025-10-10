@@ -351,7 +351,7 @@ p {
   background-color: var(--light-bg);
 }
 
-/* === Estilo base para móviles: carrusel horizontal === */
+
 .team-grid {
   display: flex;
   overflow-x: auto;
@@ -364,7 +364,7 @@ p {
   scroll-behavior: smooth;
 }
 
-/* Ocultar scrollbar en móviles */
+
 .team-grid::-webkit-scrollbar {
   display: none;
 }
@@ -373,7 +373,6 @@ p {
   scrollbar-width: none;
 }
 
-/* Tarjetas en carrusel */
 .team-card {
   flex: 0 0 90%;
   max-width: 280px;
@@ -389,12 +388,12 @@ p {
   opacity: 1;
 }
 
-/* Mover al líder (2º hijo) al inicio del carrusel */
+
 .team-grid > :nth-child(2) {
   order: -1;
 }
 
-/* === Tablet: volver a grid de 2 columnas === */
+
 @media (min-width: 768px) {
   .team-grid {
     display: grid;
@@ -421,7 +420,7 @@ p {
   }
 }
 
-/* === Desktop: diseño con líder centrado === */
+
 @media (min-width: 900px) {
   .team-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -438,9 +437,8 @@ p {
   .team-grid > :nth-child(2) {
     grid-column: 2 / span 2;
   }
-}
 
-.team-card {
+  .team-card {
   background: var(--bg);
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow);
@@ -448,6 +446,9 @@ p {
   text-align: center;
   transition: var(--transition);
 }
+}
+
+
 
 .team-card:hover {
   box-shadow: var(--shadow-lg);
