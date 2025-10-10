@@ -69,6 +69,13 @@ const App = () => {
     { nombre: 'Carlos Rodríguez', rol: 'Programación y desarrollo', avatar: 'https://placehold.co/120x120/8b5cf6/white?text=CR' },
   ];
 
+  // 👇 Nuevo: array reordenado para que el líder (índice 1) vaya primero
+const integrantesReordenados = [
+  integrantes[1], // Martín (líder)
+  ...integrantes.slice(0, 1), // Tomás
+  ...integrantes.slice(2)    // el resto
+];
+
   const materiales = [
     { item: 'Display de 7 segmentos', precio: '$210.00' },
     { item: 'Soldador de estaño', precio: '$370.00' },
