@@ -70,7 +70,10 @@ const App = () => {
   ];
 
   const materiales = [
-    { item: 'Pintura', precio: '$219.00' },
+    { item: 'Display de 7 segmentos', precio: '$210.00' },
+    { item: 'Soldador de estaño', precio: '$370.00' },
+    { item: 'Pinzas cocodrilo x10', precio: '$340.00' },
+    { item: 'Pintura', precio: '$220.00' },
     { item: 'Cartón grueso', precio: '$10.00' },
     { item: 'Papel aluminio', precio: '$320.00' },
     { item: 'Alambre', precio: '$300.00' },
