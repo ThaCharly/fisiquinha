@@ -76,6 +76,8 @@ const integrantesReordenados = [
   ...integrantes.slice(2)    // el resto
 ];
 
+const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const materiales = [
     { item: 'Display de 7 segmentos', precio: '$210.00' },
     { item: 'Soldador de estaño', precio: '$370.00' },
@@ -125,41 +127,74 @@ const integrantesReordenados = [
             Física y Juego
           </motion.div>
           
-          <div className="nav-controls">
-            <motion.button
-              className="theme-toggle"
-              onClick={() => setDarkMode(!darkMode)}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              aria-label={darkMode ? "Modo claro" : "Modo oscuro"}
-            >
-              {darkMode ? <Sun className="icon" /> : <Moon className="icon" />}
-            </motion.button>
-            
-            <div className="nav-menu">
-              {['Inicio', 'Funcionamiento', 'Integrantes', 'Costos', 'Manual de juego', 'Curiosidades', 'Idea'].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(
-                    item === 'Curiosidades' ? 'curiosidades' : 
-                    item.toLowerCase() === 'idea' ? 'por-que' : 
-                    item === 'Manual de juego' ? 'manual' : 
-                    item.toLowerCase()
-                  )}
-                  className={`nav-link ${
-                    activeSection === (
-                      item === 'Curiosidades' ? 'curiosidades' : 
-                      item.toLowerCase() === 'idea' ? 'por-que' : 
-                      item === 'Manual de juego' ? 'manual' : 
-                      item.toLowerCase()
-                    ) ? 'active' : ''
-                  }`}
-                >
-                  {item}
-                </button>
-              ))}
-            </div>
-          </div>
+<div className="nav-controls">
+  <motion.button
+    className="theme-toggle"
+    onClick={() => setDarkMode(!darkMode)}
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.95 }}
+    aria-label={darkMode ? "Modo claro" : "Modo oscuro"}
+  >
+    {darkMode ? <Sun className="icon" /> : <Moon className="icon" />}
+  </motion.button>
+
+  {/* Botón hamburguesa solo en móviles */}
+  <button
+    className="mobile-menu-button"
+    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+    aria-label="Menú de navegación"
+  >
+    <div className="hamburger-line"></div>
+    <div className="hamburger-line"></div>
+    <div className="hamburger-line"></div>
+  </button>
+</div>
+
+{/* Menú móvil (overlay) */}
+{mobileMenuOpen && (
+  <motion.div
+    className="mobile-menu-overlay"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    onClick={() => setMobileMenuOpen(false)}
+  >
+    <motion.div
+      className="mobile-menu"
+      initial={{ x: "100%" }}
+      animate={{ x: 0 }}
+      exit={{ x: "100%" }}
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button
+        className="mobile-menu-close"
+        onClick={() => setMobileMenuOpen(false)}
+        aria-label="Cerrar menú"
+      >
+        ✕
+      </button>
+      <div className="mobile-menu-links">
+        {['Inicio', 'Funcionamiento', 'Integrantes', 'Costos', 'Manual de juego', 'Curiosidades', 'Idea'].map((item) => (
+          <button
+            key={item}
+            onClick={() => {
+              scrollToSection(
+                item === 'Curiosidades' ? 'curiosidades' : 
+                item.toLowerCase() === 'idea' ? 'por-que' : 
+                item === 'Manual de juego' ? 'manual' : 
+                item.toLowerCase()
+              );
+              setMobileMenuOpen(false);
+            }}
+            className="mobile-nav-link"
+          >
+            {item}
+          </button>
+        ))}
+      </div>
+    </motion.div>
+  </motion.div>
+)}
         </div>
       </nav>
 
