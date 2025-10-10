@@ -74,7 +74,7 @@ const App = () => {
     { item: 'Soldador de estaño', precio: '$370.00' },
     { item: 'Pinzas cocodrilo x10', precio: '$340.00' },
     { item: 'Pintura', precio: '$220.00' },
-    { item: 'Cartón grueso', precio: '$10.00' },
+    { item: 'Cartón grueso', precio: '$30.00' },
     { item: 'Papel aluminio', precio: '$320.00' },
     { item: 'Alambre', precio: '$300.00' },
     { item: 'Trincheta', precio: '$80.00' },
@@ -513,8 +513,8 @@ const App = () => {
                   opacity: 1, 
                   y: 0,
                   transition: { 
-                    duration: 0.5, 
-                    delay: index * 0.1
+                    duration: 0.2, 
+                    delay: index * 0.01
                   } 
                 }}
                 viewport={{ once: true }}
