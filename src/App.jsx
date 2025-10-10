@@ -16,7 +16,7 @@ const App = () => {
     if (saved !== null) {
       setDarkMode(saved === 'true');
     } else {
-      // Por defecto está el modo oscuro
+      // Por default está el modo oscuro
       setDarkMode(true);
       localStorage.setItem('darkMode', 'true');
     }
