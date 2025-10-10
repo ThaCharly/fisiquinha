@@ -79,7 +79,7 @@ const App = () => {
     { item: 'Alambre', precio: '$300.00' },
     { item: 'Trincheta', precio: '$80.00' },
     { item: 'Cinta', precio: '$130.00' },
-    { item: 'Más herramientas', precio: '$100.00' }
+    { item: 'Más herramientas', precio: '$200.00' }
   ];
 
   const totalCostos = materiales.reduce((total, item) => {
