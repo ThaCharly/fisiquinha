@@ -607,12 +607,12 @@ const App = () => {
                 <Github className="icon" />
               </motion.a>
               <motion.a 
-                href="#" 
+                href="https://github.com/ThaCharly/fisiquinha/" 
                 className="social-link"
                 whileHover={{ rotate: 10 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <Mail className="icon" />
+                
               </motion.a>
               <motion.a 
                 href="#" 
@@ -623,7 +623,7 @@ const App = () => {
                 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <Phone className="icon" />
+              
               </motion.a>
             </div>
           </div>
