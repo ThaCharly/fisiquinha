@@ -418,6 +418,15 @@ p {
   .team-grid > :nth-child(2) {
     order: 0;
   }
+
+    .team-card {
+  background: var(--bg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  text-align: center;
+  transition: var(--transition);
+  }
 }
 
 
@@ -445,10 +454,17 @@ p {
   padding: 1.5rem;
   text-align: center;
   transition: var(--transition);
-}
+  }
+
 }
 
-
+.team-card {
+  background: var(--bg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  transition: var(--transition);
+}
 
 .team-card:hover {
   box-shadow: var(--shadow-lg);
