@@ -76,7 +76,7 @@ const integrantesReordenados = [
   ...integrantes.slice(2)    // el resto
 ];
 
-const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
 
   const materiales = [
     { item: 'Display de 7 segmentos', precio: '$210.00' },
