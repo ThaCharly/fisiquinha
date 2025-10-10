@@ -595,38 +595,23 @@ const App = () => {
             </div>
           </div>
           
-          <div className="footer-bottom">
-            <p className="copyright">© 2025 Proyecto de Física 1°4. Ningún derecho reservado.</p>
-            <div className="social-links">
-              <motion.a 
-                href="#" 
-                className="social-link"
-                whileHover={{ y: -5 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Github className="icon" />
-              </motion.a>
-              <motion.a 
-                href="https://github.com/ThaCharly/fisiquinha/" 
-                className="social-link"
-                whileHover={{ rotate: 10 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                
-              </motion.a>
-              <motion.a 
-                href="#" 
-                className="social-link"
-                whileHover={{ 
-                  boxShadow: "0 0 15px rgba(59, 130, 246, 0.7)",
-                  scale: 1.1
-                }}
-                whileTap={{ scale: 0.9 }}
-              >
-              
-              </motion.a>
-            </div>
-          </div>
+          
+          <div className="footer-bottom" style={{ justifyContent: 'center' }}>
+  <p className="copyright">© 2025 Proyecto de Física 1°4. Ningún derecho reservado.</p>
+  <div className="social-links" style={{ justifyContent: 'center' }}>
+    <motion.a 
+      href="https://github.com/ThaCharly/fisiquinha/" 
+      className="social-link"
+      target="_blank"
+      rel="noopener noreferrer"
+      whileHover={{ y: -5 }}
+      whileTap={{ scale: 0.9 }}
+    >
+      <Github className="icon" />
+    </motion.a>
+  </div>
+</div>
+
         </motion.div>
       </footer>
     </div>
