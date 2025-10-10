@@ -12,13 +12,11 @@ const App = () => {
 
     // (Opcional) Persistir preferencia en localStorage
   useEffect(() => {
-    // Al cargar, intentar leer del localStorage, pero como queremos oscuro por defecto,
-    // solo usamos localStorage si ya existe una preferencia explícita
     const saved = localStorage.getItem('darkMode');
     if (saved !== null) {
       setDarkMode(saved === 'true');
     } else {
-      // Por defecto: oscuro
+      // Por defecto está el modo oscuro
       setDarkMode(true);
       localStorage.setItem('darkMode', 'true');
     }
@@ -27,8 +25,6 @@ const App = () => {
   // Guardar en localStorage cuando cambie
   useEffect(() => {
     localStorage.setItem('darkMode', darkMode.toString());
-    // También podrías aplicar la clase al <html> si lo prefieres, 
-    // pero como usas .dark-mode en .app, no es necesario
   }, [darkMode]);
 
   useEffect(() => {
@@ -62,13 +58,15 @@ const App = () => {
   };
 
   const integrantes = [
-    { nombre: 'Martín Vergara', rol: 'Líder e idea', avatar: 'https://placehold.co/120x120/6366f1/white?text=MV' },
-    { nombre: 'Carlos Rodríguez', rol: 'Programación', avatar: 'https://placehold.co/120x120/8b5cf6/white?text=CR' },
-    { nombre: 'Tomás Molinari', rol: 'Testing y experimentación', avatar: 'https://placehold.co/120x120/06b6d4/white?text=TM' },
-    { nombre: 'Santiago Anzolabehere', rol: 'Materiales y disponibilidad', avatar: 'https://placehold.co/120x120/10b931/white?text=SA' },
-    { nombre: 'Joaquín Iglesias', rol: 'Armado de textos', avatar: 'https://placehold.co/120x120/10b181/white?text=JI' },
-    { nombre: 'Brian Paz', rol: 'Armado de maqueta', avatar: 'https://placehold.co/120x120/f16366/white?text=BP' },
-    { nombre: 'Santiago Martínez', rol: 'Armado de maqueta', avatar: 'https://placehold.co/120x120/66f136/white?text=SM' }
+    { nombre: 'Martín Vergara', rol: 'Coordinación y planificación del proyecto', avatar: 'https://placehold.co/120x120/6366f1/white?text=MV' },
+    { nombre: 'Carlos Rodríguez', rol: 'Programación y desarrollo', avatar: 'https://placehold.co/120x120/8b5cf6/white?text=CR' },
+    { nombre: 'Tomás Molinari', rol: 'Testing y experimentación funcional', avatar: 'https://placehold.co/120x120/06b6d4/white?text=TM' },
+    { nombre: 'Santiago Anzolabehere', rol: 'Gestión de materiales y presupuesto', avatar: 'https://placehold.co/120x120/10b931/white?text=SA' },
+    { nombre: 'Joaquín Iglesias', rol: 'Documentación y redacción técnica', avatar: 'https://placehold.co/120x120/10b181/white?text=JI' },
+    { nombre: 'Brian Paz', rol: 'Diseño y construcción del prototipo', avatar: 'https://placehold.co/120x120/f16366/white?text=BP' },
+    { nombre: 'Santiago Martínez', rol: 'Diseño y construcción del prototipo', avatar: 'https://placehold.co/120x120/66f136/white?text=SM' },
+    { nombre: 'Paolo Guerrero', rol: 'Diseño y construcción del prototipo', avatar: 'https://placehold.co/120x120/f59e42/white?text=PG' },
+    { nombre: 'Franco Díaz', rol: 'Diseño y construcción del prototipo', avatar: 'https://placehold.co/120x120/9d4edd/white?text=FD' },
   ];
 
   const materiales = [
@@ -320,9 +318,9 @@ const App = () => {
                 className="team-card"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
+                transition={{ duration: 0.2, delay: index * 0.01 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -10 }}
+                whileHover={{ y: -12 }}
               >
                 <img 
                   src={integrante.avatar} 
