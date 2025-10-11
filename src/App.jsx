@@ -96,24 +96,41 @@ const integrantesReordenados = [
     return total + precio;
   }, 0);
 
-  const curiosidades = [
-    { 
-      titulo: "Parábola perfecta", 
-      texto: "La trayectoria ideal para encestar es una parábola con ángulo de 45° y velocidad inicial de 7 m/s" 
-    },
-    { 
-      titulo: "Fuerza de impacto", 
-      texto: "Al caer en el sensor, la pelota ejerce una fuerza de aproximadamente 0.5N durante 0.1 segundos" 
-    },
-    { 
-      titulo: "Energía cinética", 
-      texto: "Una pelota de 60g lanzada a 5 m/s tiene una energía cinética de 0.75 Joules" 
-    },
-    { 
-      titulo: "Tiempo de vuelo", 
-      texto: "Desde una altura de 2m, la pelota tarda 0.64 segundos en llegar al suelo" 
-    }
-  ];
+const curiosidades = [
+  {
+    titulo: "Lanzamiento rápido",
+    texto: "Una pelota lanzada con fuerza alcanza hasta 5 m/s en el aire"
+  },
+  { 
+    titulo: "Energía cinética", 
+    texto: "Una pelota de 60g lanzada a 5 m/s tiene una energía cinética de 0.75 Joules" 
+  },
+  { 
+    titulo: "Tiempo de vuelo", 
+    texto: "Desde una altura de 2m, la pelota tarda 0.64 segundos en llegar al suelo" 
+  },
+  {
+    titulo: "Camino en el aire",
+    texto: "Pequeñas variaciones en cómo la lanzás cambian mucho por dónde pasa la pelota"
+  },
+  {
+    titulo: "Pequeños errores",
+    texto: "Un giro o inclinación mínima al lanzar la pelota cambia mucho su trayectoria y rebote"
+  },
+  {
+    titulo: "Rebote divertido",
+    texto: "La pelota puede rebotar varias veces antes de caer, dependiendo de su peso y del material del piso"
+  },
+  {
+    titulo: "Hasta dónde llega",
+    texto: "Después de un rebote, la pelota puede subir hasta la mitad de la altura desde la que cayó, dependiendo del material"
+  },
+  { 
+    titulo: "Fuerza de impacto", 
+    texto: "Cuando la pelota toca el sensor, ejerce una pequeña fuerza que activa el sistema." 
+  },
+];
+
 
   return (
     <div className={`app ${darkMode ? 'dark-mode' : ''}`}>
