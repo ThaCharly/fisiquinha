@@ -110,12 +110,12 @@ const curiosidades = [
     texto: "Desde una altura de 2m, la pelota tarda 0.64 segundos en llegar al suelo" 
   },
   {
-    titulo: "Camino en el aire",
-    texto: "Pequeñas variaciones en cómo la lanzás cambian mucho por dónde pasa la pelota"
+  titulo: "Pequeños errores",
+  texto: "Un giro o inclinación mínima al lanzar la pelota cambia mucho su trayectoria y rebote"
   },
   {
-    titulo: "Pequeños errores",
-    texto: "Un giro o inclinación mínima al lanzar la pelota cambia mucho su trayectoria y rebote"
+    titulo: "Camino en el aire",
+    texto: "Pequeñas variaciones en cómo la lanzás cambian mucho por dónde pasa la pelota"
   },
   {
     titulo: "Rebote divertido",
