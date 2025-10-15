@@ -64,7 +64,7 @@ const App = () => {
     { nombre: 'Joaquín Iglesias', rol: 'Documentación y redacción técnica', avatar: 'https://placehold.co/120x120/10b181/white?text=JI' },
     { nombre: 'Brian Paz', rol: 'Diseño y construcción del prototipo', avatar: 'https://placehold.co/120x120/f16366/white?text=BP' },
     { nombre: 'Santiago Martínez', rol: 'Diseño y construcción del prototipo', avatar: 'https://placehold.co/120x120/66f136/white?text=SM' },
-    { nombre: 'Paolo Guerrero', rol: 'Diseño y construcción del prototipo', avatar: 'https://placehold.co/120x120/f59e42/white?text=PG' },
+    { nombre: 'Paolo Conte', rol: 'Diseño y construcción del prototipo', avatar: 'https://placehold.co/120x120/f59e42/white?text=PG' },
     { nombre: 'Franco Díaz', rol: 'Diseño y construcción del prototipo', avatar: 'https://placehold.co/120x120/9d4edd/white?text=FD' },
     { nombre: 'Carlos Rodríguez', rol: 'Programación y desarrollo', avatar: 'https://placehold.co/120x120/8b5cf6/white?text=CR' },
   ];
